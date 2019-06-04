@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>olms - Register</title>
+        <link rel="stylesheet" href="../css/register.css">
+    </head>
+    <body>
+     <div class="parent-div">
+       <div class="head">
+          <button id="btn-reg" onclick="loginFromReg()">Login</button>
+       </div>
+       <div class="reg-body">
+         <div class="reg-container ">
+            <form action="../html/lecturer/dashboard.html">
+           <div class="inner-head">
+             <p class="p" id="p-head"><strong>Register here</strong> </p>
+           </div>
+           <div class="inner-info">
+            <p class="p" id="p-info">Personal information</p>
+          </div>
+            <div class="input-container">
+                <input type="text" name="firtname" placeholder="First name" class="txts col1">
+                <input type="text" name="lastname" placeholder="Last name" class="txts col2">
+                </div>
+            <div class="input-container">
+                <input type="email" name="email" placeholder="you@example.com" class="txts col1">
+                <input type="text" name="address" placeholder="Address" class="txts col2">
+            </div>
+            <div class="input-container">
+                <input type="text" name="phone" placeholder="Phone number" class="txts col1">
+                <input type="text" name="idnumber" placeholder="National Id number" class="txts col2">
+            </div>
+          <div class="inner-info">
+                <p class="p" id="p-info">Qualification informaitlon</p>
+          </div>
+            <div class="input-container">
+                <select name="qualification" id="" class="txts col1">
+                    <option value="">--Qualification--</option>
+                    <option value="">Masters degree</option>
+                    <option value="">PHD degree</option>
+                    <option value="">Professor degree</option>
+                </select>
+                <select name="category" id="" class="txts col2">
+                        <option value="">--Category--</option>
+                    <option value="">Science and technology</option>
+                    <option value="">Business studies</option>
+                    <option value="">law</option>
+                    <option value="">Sociology</option>
+                </select>
+            </div>
+            <div class="input-container">
+                <label class="col1 lblfile">Select degree(pdf)</label>
+                <label class="col2 lblfile">Select resume(pdf)</label>
+            </div>
+            <div class="input-container">
+                <input type="file" id="degree-doc" value="Choose your degree"  >
+                <input type="file" name="cv-doc" title="Choose your cv" class="col2">
+            </div>
+            <div class="inner-info">
+                    <p class="p" id="p-info">Credencials information</p>
+            </div>
+            <div class="input-container">
+                <input type="password" name="password" placeholder="Password" class="txts col1">
+                <input type="password" name="confirm-password" placeholder="Cofirm password" class="txts col2">
+            </div>
+            <div class="input-footer">
+                    <input type="reset" id="reset" value="Reset" class="btns col1">
+                    <input type="submit" id="reset" value="Regiser" class="btns col2">
+            </div>
+        </form>
+         </div>
+
+       </div>
+       <div class="footer">Copy right © <script>document.write(new Date().getFullYear());</script> Hamis & Daniel Allright reserved</div>
+       </div>
+       <script src="../js/main.js"></script>
+    </body>
+</html>
