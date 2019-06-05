@@ -8,9 +8,11 @@
     </head>
     <body >
      <div class="parent-div">
+        <div class="head-login">
+            <button id="btn-login" onclick="registerFromHeader()">Register</button>
+      </div>
       <div class="main">
         <div class="content">
-        <form action="#">
          <div class="login-head">
            <p id="p-head">Login here</p>
          </div>
@@ -18,12 +20,12 @@
          <div class="login-body">
           
              <table  width="500px" height="80px">
-               <tr><td colspan="2"><div class="inc"><h5 id="incorrect">Inorrect email or password!</h5></div></td></tr>
+               <tr><td colspan="2"><div class="inc" id="incorrect-data"><h5 id="incorrect"></h5></div></td></tr>
                  <tr class="tr">
-                     <td class="td-label">Email</td><td><input type="email" name="user_email" class="txts"/></td>
+                     <td class="td-label">Email</td><td><input type="email" name="user_email" class="txts" id="user_email"/></td>
                  </tr>
                 <tr class="tr">
-                  <td class="td-label">Password</td><td><input type="password" name="user_email" class="txts"/></td>
+                  <td class="td-label">Password</td><td><input type="password" name="user_password" class="txts" id="user_password"/></td>
                </tr>
              </table>
          </div>
@@ -33,12 +35,11 @@
          </div>
          <label class="lbl-forgot" id="lbl-forgot">Forgot password?</label>
          <label class="lbl-reg" id="lbl-reg">Register here</label>
-        </form>
         </div>
      </div>
      <div class="footer">Copy right © <script>document.write(new Date().getFullYear());</script> Hamis & Daniel Allright reserved</div>
      </div>
-      <script src="../js/main.js">
+      <script type="text/javascript" src="./../js/main.js">
       </script>
     </body>
 </html>
