@@ -1,3 +1,9 @@
+window.onload = function() {
+    const myInput = document.getElementsByClassName('pwds');
+    myInput.onpaste = function(e) {
+      e.preventDefault();
+    }
+   }
 function start(){
     window.location.href = './html/login.html';
 }
@@ -12,7 +18,7 @@ if(email === "" || password === ""){
 }
 else if(email !== "" || password !== ""){
 if(email === "benshidanny11@gmail.com" && password === "Danny123" ){
-    window.location.href = '../html/user/admin/dashboard.html';
+    window.location.href = '../html/admin/dashboard.html';
     }
     else if(email ==="emmylavie3@gmail.com" && password === "dukuze"){
     window.location.href = '../html/user/hod/dashboard.html'; 
@@ -43,3 +49,22 @@ function loginFromReg(){
 function registerFromHeader(){
     window.location.href = 'register.html'; 
 }
+function dropdown(){
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+    document.getElementById("myDropdown").classList.toggle("show");
+
+}
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
