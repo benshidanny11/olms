@@ -1,0 +1,368 @@
+<html>
+    <head>
+        <title>olms - dashboard</title>
+        <link rel="stylesheet" href="../../css/admin.css">
+    </head>
+    <body>
+        <!-- For head -->
+     <div class="head">
+      <div class="dropdown">
+        <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="../login.html">Logout</a>
+            <a href="setting.html">Account setting</a>
+          </div>
+     </div>
+
+    </div>
+
+      <div class="bodycontainer" onmousemove="hideDropdown()">
+
+        <!-- For body all activities-->
+        <div class="body-content" id="panel-all-activities">
+          <div class="content-head">
+            <p class="p-head">System administration</p>
+          </div>
+          <div class="inner-content-body">
+            <table height="440px" width="790px"  style="border-spacing: 0; border-width: 0; padding: 0; border-width: 0;">
+             <tr class="rows r-head">
+               <td class="data-h">
+                Academic afairs
+               </td>
+               <td class="data-h">
+                 Lecturers
+               </td>
+              <td class="data-h">
+               Head of department
+              </td>
+              <td class="data-h">
+               Users
+              </td>
+             </tr>
+             <tr class="rows">
+              <td class="data">
+                <div class="inner-data">
+                  <div class="data-holder">
+                  <img src="../../assets/images/univ.png" alt="University photo" height="30px" width="50px">
+                  </div>
+                  <p class="p-label"  id="open-univ-panel">University</p> 
+                </div>
+              </td>
+              <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/lecturers.png" alt="Lecturer photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">View all rectures</p> 
+                  </div>              
+             </td>
+             <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/viewhod.png" alt="Hod photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">View all HODs</p> 
+                  </div>                 
+             </td>
+             <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/add-admin.png" alt="Add admin photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">Add new admin</p> 
+                  </div>                 
+            </td>
+            </tr>
+            <tr class="rows">
+              <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/fac.png" alt="Faculty photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label" id="open-fac-panel">Faculty</p> 
+                  </div> 
+              </td>
+              <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/verified.png" alt="Verified lecturers photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">Verified lecturers</p> 
+                  </div>   
+             </td>
+             <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/add-hod.png" alt="Add hod photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">Add new HOD</p> 
+                  </div>                   
+             </td>
+             <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/viewall-admins.png" alt="View admins photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">View all admins</p> 
+                  </div>                
+            </td>
+            </tr>
+            <tr class="rows">
+              <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/department.png" alt="Department photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label" id="open-dep-panel">Department</p> 
+                  </div>              
+              </td>
+              <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/unverified.png" alt="Unverified lecturers photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">Unverified lecturers</p> 
+                  </div>
+             </td>
+             <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/updatehod.png" alt="Update hod photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">Update HOD</p> 
+                  </div>                   
+             </td>
+             <td class="data">  
+              <div class="inner-data">
+                  <div class="data-holder">
+                  <img src="../../assets/images/remove-admin.png" alt="Remove admin photo" height="30px" width="50px">
+                  </div>
+                  <p class="p-label">Remove admin</p> 
+                </div>                              
+            </td>
+            </tr>
+            <tr class="rows">
+              <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/class.png" alt="Class photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label" id="open-lev-panel">Level</p> 
+                  </div>  
+              </td>
+              <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/avairable.png" alt="Avairable lecturers photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">Avairable lecturers</p> 
+                  </div>              
+             </td>
+             <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/removehod.png" alt="Remove hod photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label">Remove HOD</p> 
+                  </div>                  
+             </td>
+             <td class="data">
+                
+            </td>
+            </tr>
+            <tr class="rows">
+              <td class="data">
+                <div class="inner-data">
+                    <div class="data-holder">
+                    <img src="../../assets/images/course.png" alt="Course photo" height="30px" width="50px">
+                    </div>
+                    <p class="p-label" id="open-course-panel">Course</p> 
+                  </div>               
+              </td>
+              <td class="data">
+                
+             </td>
+             <td class="data">
+                
+             </td>
+             <td class="data">
+                
+            </td>
+            </tr>
+            </table>
+          </div>
+        </div>
+        <!-- End of body all activities-->    
+
+        <!-- For university activities -->
+        <div class="unversity-panel" id="panel-univ">
+            <div class="content-head">
+                <p class="p-head">Manage university</p>
+              </div>
+              <div class="inner-content-container">
+                <div class="un-content">
+                 <div class="manage-univ">
+                   <div class="img-holder">
+                      <img src="../../assets/images/univ.png" alt="University Image"  height="50px" width="60px">
+                   </div>
+                   <p class="p-univ">View universities</p>
+                 </div>
+                 <div class="manage-univ">
+                    <div class="img-holder">
+                        <img src="../../assets/images/add-university.png" alt="University Image"  height="50px" width="60px">                     
+                      </div>
+                    <p class="p-univ">Add university</p>
+                  </div>
+                  <div class="manage-univ">
+                      <div class="img-holder">
+                          <img src="../../assets/images/remove-university.png" alt="University Image"  height="50px" width="60px">                     
+                        </div>
+                      <p class="p-univ">Remove university</p>
+                    </div>
+                </div>
+              </div>
+          <div class="un-footer">
+            <button class="btn-back" id="bnt-back-home">Back to home</button>
+            </div>
+          </div>
+   <!-- End of university panel definition -->
+
+          <!-- For Faculty activities -->
+          <div class="faculty-panel" id="panel-fac">
+            <div class="content-head">
+                <p class="p-head">Manage Faculty</p>
+              </div>
+              <div class="inner-content-container">
+                <div class="un-content">
+                 <div class="manage-univ">
+                   <div class="img-holder">
+                      <img src="../../assets/images/fac.png" alt="Faculty Image"  height="50px" width="60px">
+                   </div>
+                   <p class="p-univ">View All Faculties</p>
+                 </div>
+                 <div class="manage-univ">
+                    <div class="img-holder">
+                        <img src="../../assets/images/add-fac.png" alt="Faculty Image"  height="50px" width="60px">                     
+                      </div>
+                    <p class="p-univ">Add Faculty</p>
+                  </div>
+                  <div class="manage-univ">
+                      <div class="img-holder">
+                          <img src="../../assets/images/remove-fac.png" alt="Faculty Image"  height="50px" width="60px">                     
+                        </div>
+                      <p class="p-univ">Remove Faculty</p>
+                    </div>
+                </div>
+              </div>
+          <div class="un-footer">
+            <button class="btn-back" id="bnt-back-home-1">Back to home</button>
+            </div>
+          </div>
+          <!-- End of faculty panel definition -->
+
+             <!-- For Department activities -->
+             <div class="department-panel" id="panel-dep">
+              <div class="content-head">
+                  <p class="p-head">Manage department</p>
+                </div>
+                <div class="inner-content-container">
+                  <div class="un-content">
+                   <div class="manage-univ">
+                     <div class="img-holder">
+                        <img src="../../assets/images/department.png" alt="Faculty Image"  height="50px" width="60px">
+                     </div>
+                     <p class="p-univ">View All departments</p>
+                   </div>
+                   <div class="manage-univ">
+                      <div class="img-holder">
+                          <img src="../../assets/images/add-dep.png" alt="Faculty Image"  height="50px" width="60px">                     
+                        </div>
+                      <p class="p-univ">Add department</p>
+                    </div>
+                    <div class="manage-univ">
+                        <div class="img-holder">
+                            <img src="../../assets/images/remove-fac.png" alt="Faculty Image"  height="50px" width="60px">                     
+                          </div>
+                        <p class="p-univ">Remove department</p>
+                      </div>
+                  </div>
+                </div>
+              <div class="un-footer">
+              <button class="btn-back" id="bnt-back-home-2">Back to home</button>
+              </div>
+            </div>
+            <!-- End of department panel definition --> 
+
+             <!-- For level activities -->
+             <div class="level-panel" id="panel-lev">
+              <div class="content-head">
+                  <p class="p-head">Manage levels</p>
+                </div>
+                <div class="inner-content-container">
+                  <div class="un-content">
+                   <div class="manage-univ">
+                     <div class="img-holder">
+                        <img src="../../assets/images/class.png" alt="Level Image"  height="50px" width="60px">
+                     </div>
+                     <p class="p-univ">View All levels</p>
+                   </div>
+                   <div class="manage-univ">
+                      <div class="img-holder">
+                          <img src="../../assets/images/add-fac.png" alt="Level Image"  height="50px" width="60px">                     
+                        </div>
+                      <p class="p-univ">Add level</p>
+                    </div>
+                    <div class="manage-univ">
+                        <div class="img-holder">
+                            <img src="../../assets/images/remove-university.png" alt="Level Image"  height="50px" width="60px">                     
+                          </div>
+                        <p class="p-univ">Remove level</p>
+                      </div>
+                  </div>
+                </div>
+              <div class="un-footer">
+              <button class="btn-back" id="bnt-back-home-3">Back to home</button>
+              </div>
+            </div>
+            <!-- End of level panel definition --> 
+
+             <!-- For level activities -->
+             <div class="course-panel" id="panel-cou">
+              <div class="content-head">
+                  <p class="p-head">Manage courses</p>
+                </div>
+                <div class="inner-content-container">
+                  <div class="un-content">
+                   <div class="manage-univ">
+                     <div class="img-holder">
+                        <img src="../../assets/images/course.png" alt="Course Image"  height="50px" width="60px">
+                     </div>
+                     <p class="p-univ">View All courses</p>
+                   </div>
+                   <div class="manage-univ">
+                      <div class="img-holder">
+                          <img src="../../assets/images/add-course.png" alt="Course Image"  height="50px" width="60px">                     
+                        </div>
+                      <p class="p-univ">Add course</p>
+                    </div>
+                    <div class="manage-univ">
+                        <div class="img-holder">
+                            <img src="../../assets/images/remove-course.png" alt="Course Image"  height="50px" width="60px">                     
+                          </div>
+                        <p class="p-univ">Remove course</p>
+                      </div>
+                  </div>
+                </div>
+              <div class="un-footer">
+              <button class="btn-back" id="bnt-back-home-4">Back to home</button>
+              </div>
+            </div>
+            <!-- End of level panel definition --> 
+      </div>
+
+     <!-- <script src="../../js/main.js">
+     </script> -->
+      <script src="../../js/admin.js">
+      </script>
+    </body>
+</html>
