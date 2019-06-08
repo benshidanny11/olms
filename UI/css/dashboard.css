@@ -219,9 +219,6 @@ html {
    text-decoration: underline;
    cursor: pointer;
   }
-  .manage-univ{
-  margin: 0px;  
-  }
   .p-univ{
     margin: 2px;   
     width: inherit;
@@ -235,7 +232,7 @@ html {
     margin-right: 2px;
     width: 150px;
     border-radius: 5px;
-
+    margin-right: 20px;
   }
   .manage-univ:hover {
    cursor: pointer;
@@ -280,4 +277,42 @@ html {
     box-shadow: 0 4px 8px 0 rgba(11, 1, 20, 0.2), 0 6px 20px 0 rgba(135, 7, 170, 0.19);
     display: none;
     border-radius: 10px;  
+  }
+  /* Especially for HOD dashboard */
+  .hod-activities{
+    width: 800px;
+    height: 500px;
+    box-shadow: 0 4px 8px 0 rgba(11, 1, 20, 0.2), 0 6px 20px 0 rgba(135, 7, 170, 0.19);
+    display: block;
+    border-radius: 10px;
+  }
+  .hod-content{
+    width: 600px;
+    height: 300px;
+    border: 1px solid rgb(111, 51, 207);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+  }
+  .inner-manage-container{
+    margin-top: 45px;
+    width: 600px;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .hod-name{
+    height: 25px;
+    background-color: white;
+    border: none;
+    color: rgb(111, 51, 207);
+    outline: none;
+    text-align: center ;
   }
