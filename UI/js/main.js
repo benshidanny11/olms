@@ -24,7 +24,7 @@ if(email === "benshidanny11@gmail.com" && password === "Danny123" ){
     window.location.href = '../html/hod/dashboard.html'; 
     }
     else if(email ==="gprestein55@gmail.com" && password === "eric123"){
-    window.location.href = '../html/lectuler/dashboard.html'; 
+    window.location.href = '../html/lecturer/dashboard.html'; 
     }
     else{
     document.getElementById("incorrect").innerHTML="Inorrect email or password!"
@@ -68,3 +68,6 @@ toggle between hiding and showing the dropdown content */
       }
     }
   }
+  function preventBack() { window.history.forward(); }
+  setTimeout("preventBack()", 0);
+  window.onunload = function () { null };

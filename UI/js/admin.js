@@ -65,3 +65,6 @@ document.getElementById("open-course-panel").addEventListener("click",() => {
     document.getElementById("panel-all-activities").style.display="none";
     document.getElementById("panel-cou").style.display="block";  
 });
+function preventBack() { window.history.forward(); }
+setTimeout("preventBack()", 0);
+window.onunload = function () { null };
