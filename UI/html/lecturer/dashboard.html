@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>olms - dashboard</title>
+        <link rel="stylesheet" href="../../css/dashboard.css">
+    </head>
+    <body>
+        <!-- For head -->
+     <div class="head">
+      <div class="dropdown">
+        <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="../login.html">Logout</a>
+            <a href="setting.html">Account setting</a>
+          </div>
+     </div>
+
+    </div>
+
+      <div class="bodycontainer" onmousemove="hideDropdown()">
+
+             <!-- For level activities -->
+             <div class="hod-activities" id="panel-hod-act">
+              <div class="content-head">
+                  <p class="p-head">Get connected with universities</p>
+                </div>
+                <div class="inner-content-container">
+                  <div class="hod-content">
+                   <div class="inner-manage-container">
+                    <div class="manage-univ">
+                        <div class="img-holder">
+                           <img src="../../assets/images/apply.png" alt="Course Image"  height="50px" width="60px">
+                        </div>
+                        <p class="p-univ">Apply for session</p>
+                      </div>
+                      <div class="manage-univ">
+                         <div class="img-holder">
+                             <img src="../../assets/images/course-scedule.png" alt="Course Image"  height="50px" width="60px">                     
+                           </div>
+                         <p class="p-univ">Teaching schedules</p>
+                       </div>
+                       <div class="manage-univ">
+                           <div class="img-holder">
+                               <img src="../../assets/images/exam-schedule.png" alt="Course Image"  height="50px" width="60px">                     
+                             </div>
+                           <p class="p-univ">Exam schedule</p>
+                         </div>
+                   </div>
+                   <div class="inner-manage-container">
+                    <div class="manage-univ">
+                        <div class="img-holder">
+                           <img src="../../assets/images/univ.png" alt="Course Image"  height="50px" width="60px">
+                        </div>
+                        <p class="p-univ">View universities</p>
+                      </div>
+                      <div class="manage-univ">
+                         <div class="img-holder">
+                             <img src="../../assets/images/profile.png" alt="Course Image"  height="50px" width="60px">                     
+                           </div>
+                         <p class="p-univ">My profile</p>
+                       </div>
+                       <div class="manage-univ">
+                        <div class="img-holder">
+                            <img src="../../assets/images/contact-admin.png" alt="Course Image"  height="50px" width="60px">                     
+                          </div>
+                        <p class="p-univ">Contact HOD</p>
+                      </div>
+                   </div>
+                  </div>
+                </div>
+              <div class="un-footer">
+              <p class="hod-name" id="bnt-hod-name">Lecturer's name </p>
+              </div>
+            </div>
+            <!-- End of level panel definition --> 
+      </div>
+
+     <!-- <script src="../../js/main.js">
+     </script> -->
+      <script src="../../js/admin.js">
+      </script>
+    </body>
+</html>
