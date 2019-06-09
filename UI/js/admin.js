@@ -68,3 +68,9 @@ document.getElementById("open-course-panel").addEventListener("click",() => {
 function preventBack() { window.history.forward(); }
 setTimeout("preventBack()", 0);
 window.onunload = function () { null };
+document.getElementById("div-add-univ").addEventListener("click",() => {
+    window.location.href = '../../html/admin/add_uni.html';
+});
+document.getElementById("view-all-univ").addEventListener("click",() => {
+    window.location.href = '../../html/admin/view_univ.html';
+});
