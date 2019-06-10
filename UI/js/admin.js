@@ -80,3 +80,6 @@ document.getElementById("div-reove-univ").addEventListener("click",()=>{
 document.getElementById("add-fac").addEventListener("click",()=>{
     window.location.href = '../../html/admin/add-fac.html';
 });
+document.getElementById("view-fac").addEventListener("click",()=>{
+    window.location.href = '../../html/admin/view-fac.html';
+});
