@@ -1,6 +1,4 @@
 function dropdown(){
-    /* When the user clicks on the button, 
-    toggle between hiding and showing the dropdown content */
         document.getElementById("myDropdown").classList.toggle("show");
     
     }
@@ -19,6 +17,6 @@ function dropdown(){
     });
   document.body.onclick = function (ev) {
     if (ev.target.getAttribute("class") == "btn-add-fac") {
-      window.location.href = '../../html/admin/add-fac.html';
+      window.location.href = '../../html/admin/add-dep.html';
     }
   };

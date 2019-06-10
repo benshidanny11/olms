@@ -300,12 +300,12 @@ html {
     transition: 1s;
 }
 .data{
-    width: 300px;
+    width: 400px;
     height: 40px; 
   }
   .univ-data
   {
-    width: 300px; 
+    width: 400px; 
     height: 40px; 
     color: rgb(60, 0, 156);
     padding-top: 8px;
@@ -317,11 +317,11 @@ html {
     align-items: center;
   }
   .img-holder{
-    width: 300px;   
+    width: 400px;   
   }
   .img-holder-div{
     padding-left: 10px;
-    width: 300px;    
+    width: 400px;    
   }
   .data-search{
     width: 400px;
@@ -389,7 +389,7 @@ border-bottom-right-radius: 4px;
   text-decoration: underline;
 }
 .add-fac{
-  width: 300px; 
+  width: 400px; 
   height: 40px; 
   color: rgb(60, 0, 156);
   padding-top: 4px;
