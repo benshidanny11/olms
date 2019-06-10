@@ -1,0 +1,61 @@
+<html>
+    <title>
+        olms - Add faculty
+    </title>
+    <link rel="stylesheet" href="../../css/add-fac.css">
+    <body>
+
+
+<!-- For head -->
+<div class="main">
+ <div class="head">
+    <div class="dropdown">
+        <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="../login.html">Logout</a>
+            <a href="setting.html">Account setting</a>
+        </div>
+    </div>
+ </div>
+ <div class="bodycontainer" onmousemove="hideDropdown()">
+
+        <div class="bodycontainer" onmousemove="hideDropdown()">
+
+                <!-- Faculty information -->
+                <div class="hod-activities" id="panel-hod-act">
+                 <div class="content-head">
+                     <p class="p-head">Register faculty</p>
+                   </div>
+                   <div class="inner-content-container">
+                     <div class="hod-content">
+                      <div class="inner-reg">
+                          <form action="./dashboard.html">
+
+                        <div class="input-container">
+                                <input type="text" name="fac-name" placeholder="Faculty name" class="txts col1">
+                        </div>
+                        <div class="input-container">
+                                <select name="university-name"  class="txts col1">
+                                 <option value="">--Select university--</option>
+                                 <option value="">Kigali independent university (ULK)</option>
+                                 <option value=""> University of Lay Adventists of Kigali (UNILAK)</option>
+                                </select>
+                        </div>
+                        <div class="un-reg-footer">
+                                <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
+                                <button class="btn-back" id="bnt-submit">Register faculty</button>
+                       </div>
+                    </form>
+                      </div>
+                     </div>
+                   </div>
+                 <div class="un-footer">
+                  <button class="btn-back" id="bnt-back-home-n">Back to home</button>
+                 </div>
+               </div>
+               <!-- End of faculty  definition --> 
+         </div>
+
+        <script src="../../js/add-fac.js"></script>
+    </body>
+</html>

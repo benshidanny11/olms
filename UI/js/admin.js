@@ -77,3 +77,6 @@ document.getElementById("view-all-univ").addEventListener("click",() => {
 document.getElementById("div-reove-univ").addEventListener("click",()=>{
     window.location.href = '../../html/admin/remove-univ.html';
 });
+document.getElementById("add-fac").addEventListener("click",()=>{
+    window.location.href = '../../html/admin/add-fac.html';
+});
