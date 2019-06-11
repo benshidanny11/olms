@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <title>
+            olms - All departments
+        </title>
+        <link rel="stylesheet" href="../../css/view-dep.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    </head>
+    <body>
+    <!-- For head -->
+     <div class="head">
+        <div class="dropdown">
+            <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../login.html">Logout</a>
+                <a href="setting.html">Account setting</a>
+            </div>
+        </div>
+     </div>
+     <div class="bodycontainer" onmousemove="hideDropdown()">
+
+            <!-- Lecturer activities -->
+            <div class="hod-activities" id="panel-hod-act">
+             <div class="content-head">
+                 <p class="p-head">All departments information</p>
+               </div>
+              <div class="info-container">
+               <table width="1200">
+                    <tr class="data-row-search">
+                        <td class="data-search">
+                        </td>
+                        <td class="data-search">
+              
+                        </td>
+                        <td class="data-search">
+                            <div class="univ-data-search">
+                             <input type="text" name="university-query" placeholder="Type department name" id="txt-search"/><button id="btn-search"><img src="../../assets/images/search-img.png" alt="" width="20" height="20px"></button>
+                            </div>
+                        </td>
+                 </tr>
+                 <tr class="data-row">
+                     <td class="img-holder">
+                     <div class="univ-data">
+                            <p class="p-nuniv-name"> Computer science</p>
+                        </div>
+                     </td>
+                     <td class="data">
+                         <div class="univ-data">
+                          <p class="p-nuniv-name"> Science and technology</p>
+                         </div>                
+                     </td>
+                     <td class="data">
+
+                        </td>
+                     <td class="data">
+                        <div class="add-fac">
+                           <button class="btn-add-level">+ Add level</button>
+                         </div>
+                     </td>
+                 </tr>
+                 <tr class="data-row">
+                        <td class="data">
+                        <div class="univ-data">
+                                <p class="p-nuniv-name"> Finance</p> 
+                        </div>
+                        </td>
+                        <td class="data">
+                            <div class="univ-data">
+                             <p class="p-nuniv-name"> Econonic and busines Studies</p>
+                            </div>                
+                        </td>
+                        <td class="data">
+
+                        </td>
+                        <td class="data">
+                            <div class="add-fac">
+                                <button class="btn-add-level">+ Add level</button>
+                            </div>
+                        </td>
+                    </tr>
+                 
+               </table>
+              </div>
+             <div class="un-footer">
+              <button class="btn-back" id="bnt-back-home-n">Back to home</button>
+             </div>
+           </div>
+           <!-- End of lecturer  panel definition --> 
+     </div>
+     <script src="../../js/view-dep.js"></script>
+    </body>
+</html>
