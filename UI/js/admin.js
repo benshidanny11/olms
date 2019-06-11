@@ -89,3 +89,6 @@ document.getElementById("remove-fac-1").addEventListener("click",()=>{
 document.getElementById("add-dep-22").addEventListener('click',()=>{
     window.location.href = '../../html/admin/add-dep.html';
 });
+document.getElementById("view-all-deps").addEventListener("click",()=>{
+    window.location.href = '../../html/admin/view-dep.html';
+});
