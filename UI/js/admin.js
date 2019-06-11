@@ -92,3 +92,6 @@ document.getElementById("add-dep-22").addEventListener('click',()=>{
 document.getElementById("view-all-deps").addEventListener("click",()=>{
     window.location.href = '../../html/admin/view-dep.html';
 });
+document.getElementById("remove-dep").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/remove-dep.html'; 
+});
