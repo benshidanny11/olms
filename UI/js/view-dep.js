@@ -17,6 +17,6 @@ document.getElementById("bnt-back-home-n").addEventListener('click',() =>{
 });
 document.body.onclick = function (ev) {
 if (ev.target.getAttribute("class") == "btn-add-level") {
-  window.location.href = '../../html/admin/add-lev.html';
+  window.location.href = '../../html/admin/add-course.html';
 }
 };

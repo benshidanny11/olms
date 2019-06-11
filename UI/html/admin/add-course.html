@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <title>
+            olms - Add course
+        </title>
+        <link rel="stylesheet" href="../../css/add-dep.css">
+    </head>
+    <body>
+<!-- For head -->
+<div class="main">
+<div class="head">
+    <div class="dropdown">
+        <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+        <div id="myDropdown" class="dropdown-content">
+            <a href="../login.html">Logout</a>
+            <a href="setting.html">Account setting</a>
+        </div>
+    </div>
+</div>
+<div class="bodycontainer" onmousemove="hideDropdown()">
+
+        <div class="bodycontainer" onmousemove="hideDropdown()">
+
+                <!-- Faculty information -->
+                <div class="hod-activities" id="panel-hod-act">
+                <div class="content-head">
+                    <p class="p-head">Register course to the department</p>
+                    </div>
+                    <div class="inner-content-container">
+                    <div class="hod-content">
+                        <div class="inner-reg">
+                     <form action="./dashboard.html">
+                        <div class="input-container">
+                                <input type="text" name="course-code" placeholder="Course code" class="txts col1">
+                        </div>                        
+                        <div class="input-container">
+                                <input type="text" name="course-name" placeholder="Course name" class="txts col1">
+                        </div>
+                        <div class="input-container">
+                                <input type="number" name="course-credit" placeholder="Course credit" class="txts col1">
+                        </div>
+                        <div class="input-container">
+                                <select name="level"  class="txts col1">
+                                <option value="">--Select level--</option>
+                                <option value="">Year 1</option>
+                                <option value=""> Year 2</option>
+                                <option value=""> Year 3</option>
+                                <option value=""> Year 4</option>
+                                <option value=""> Year 5</option>
+                                </select>
+                        </div>
+                        <div class="input-container">
+                                <select name="university-name"  class="txts col1">
+                                <option value="">--Select department--</option>
+                                <option value="">Computer science</option>
+                                <option value=""> Finance</option>
+                                <option value=""> Law</option>
+                                <option value=""> Social sciences</option>
+                                </select>
+                        </div>                       
+                        <div class="un-reg-footer">
+                                <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
+                                <button class="btn-back" id="bnt-submit">Register course</button>
+                        </div>
+                    </form>
+                        </div>
+                    </div>
+                    </div>
+                <div class="un-footer">
+                    <button class="btn-back" id="bnt-back-home-n">Back to home</button>
+                </div>
+                </div>
+                <!-- End of faculty  definition --> 
+        </div>
+        <script src="../../js/add-dep.js">
+            </script>
+    </body>
+</html>

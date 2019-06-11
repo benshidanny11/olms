@@ -34,11 +34,6 @@ document.getElementById("bnt-back-home").addEventListener("click",() => {
     document.getElementById("panel-all-activities").style.display="block";
     document.getElementById("panel-dep").style.display="none";    
 });
-   //From level panel
-   document.getElementById("bnt-back-home-3").addEventListener("click",() => {
-    document.getElementById("panel-all-activities").style.display="block";
-    document.getElementById("panel-lev").style.display="none";    
-});
    //From course panel
    document.getElementById("bnt-back-home-4").addEventListener("click",() => {
     document.getElementById("panel-all-activities").style.display="block";
@@ -56,10 +51,6 @@ document.getElementById("open-fac-panel").addEventListener("click",() => {
 document.getElementById("open-dep-panel").addEventListener("click",() => {
     document.getElementById("panel-all-activities").style.display="none";
     document.getElementById("panel-dep").style.display="block";  
-});
-document.getElementById("open-lev-panel").addEventListener("click",() => {
-    document.getElementById("panel-all-activities").style.display="none";
-    document.getElementById("panel-lev").style.display="block";  
 });
 document.getElementById("open-course-panel").addEventListener("click",() => {
     document.getElementById("panel-all-activities").style.display="none";
@@ -94,4 +85,7 @@ document.getElementById("view-all-deps").addEventListener("click",()=>{
 });
 document.getElementById("remove-dep").addEventListener('click',()=>{
     window.location.href = '../../html/admin/remove-dep.html'; 
+});
+document.getElementById("add-course-dev").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/add-course.html'; 
 });
