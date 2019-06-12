@@ -95,3 +95,6 @@ document.getElementById("view-all-courses").addEventListener('click',()=>{
 document.getElementById("remove-a-course").addEventListener('click',()=>{
     window.location.href = '../../html/admin/remove-course.html'; 
 });
+document.getElementById("view-all-lects").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/all-lecturers.html'; 
+});
