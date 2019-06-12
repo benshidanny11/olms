@@ -98,3 +98,6 @@ document.getElementById("remove-a-course").addEventListener('click',()=>{
 document.getElementById("view-all-lects").addEventListener('click',()=>{
     window.location.href = '../../html/admin/all-lecturers.html'; 
 });
+document.getElementById("verified-lects").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/verif-lecturers.html'; 
+});
