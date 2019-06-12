@@ -89,3 +89,9 @@ document.getElementById("remove-dep").addEventListener('click',()=>{
 document.getElementById("add-course-dev").addEventListener('click',()=>{
     window.location.href = '../../html/admin/add-course.html'; 
 });
+document.getElementById("view-all-courses").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/view-course.html'; 
+});
+document.getElementById("remove-a-course").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/remove-course.html'; 
+});
