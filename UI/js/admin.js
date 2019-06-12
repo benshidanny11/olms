@@ -101,3 +101,6 @@ document.getElementById("view-all-lects").addEventListener('click',()=>{
 document.getElementById("verified-lects").addEventListener('click',()=>{
     window.location.href = '../../html/admin/verif-lecturers.html'; 
 });
+document.getElementById("unverified-lects").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/unverified-lecturers.html'; 
+});
