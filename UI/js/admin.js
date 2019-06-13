@@ -108,3 +108,6 @@ document.getElementById("unverified-lects").addEventListener('click',()=>{
 document.getElementById("available-lects-div").addEventListener('click',()=>{
     window.location.href = '../../html/admin/available-lecturers.html'; 
 });
+document.getElementById("all-hods-div").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/all-hods.html'; 
+});
