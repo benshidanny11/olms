@@ -111,3 +111,6 @@ document.getElementById("available-lects-div").addEventListener('click',()=>{
 document.getElementById("all-hods-div").addEventListener('click',()=>{
     window.location.href = '../../html/admin/all-hods.html'; 
 });
+document.getElementById("add-hod-div").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/all-hods.html'; 
+});

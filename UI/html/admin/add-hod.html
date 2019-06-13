@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>olms - add hod</title>
+        <link rel="stylesheet" href="../../css/add-hod.css">
+    </head>
+    <body>
+
+    <!-- For head -->
+<div class="main">
+    <div class="head">
+        <div class="dropdown">
+            <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../login.html">Logout</a>
+                <a href="setting.html">Account setting</a>
+            </div>
+    </div>
+</div>
+
+        
+<div class="bodycontainer" onmousemove="hideDropdown()">
+
+        <!-- Faculty information -->
+        <div class="hod-activities" id="panel-hod-act">
+         <div class="content-head">
+             <p class="p-head"><strong>Register HOD here</strong></p>
+           </div>
+           <div class="inner-content-container">
+             <div class="hod-content">
+              <div class="inner-reg">
+                  <form action="./dashboard.html">
+                    <div class="inner-info">
+                            <p class="p" id="p-info">Personal information</p>
+                          </div>
+                            <div class="input-container">
+                                <input type="text" name="firtname" placeholder="First name" class="txts col1">
+                                <input type="text" name="lastname" placeholder="Last name" class="txts col2">
+                                </div>
+                            <div class="input-container">
+                                <input type="email" name="email" placeholder="hod@example.com" class="txts col1">
+                                <input type="text" name="phone" placeholder="HOD's phone number" class="txts col2">
+                            </div>
+                          <div class="inner-info">
+                                <p class="p" id="p-info">Academic informaitlon</p>
+                          </div>
+                            <div class="input-container">
+                                <select name="qualification" id="" class="txts col1">
+                                    <option value="">--Select university--</option>
+                                    <option value="">Kigali Independent university</option>
+                                    <option value=""> University of Lay Adventists of Kigali (UNILAK)</option>
+                                </select>
+                                <select name="category" id="" class="txts col2">
+                                        <option value="">--Select department--</option>
+                                    <option value="">Computer science</option>
+                                    <option value="">Economic and business studies</option>
+                                </select>
+                            </div>
+                            <div class="inner-info">
+                                    <p class="p" id="p-info">Credencials information</p>
+                            </div>
+                            <div class="input-container">
+                                <input type="password" name="password" placeholder="Password" class="txts col1 pwds"  onpaste="return false;">
+                                <input type="password" name="confirm-password" placeholder="Cofirm password" class="txts col2 pwds"  onpaste="return false;">
+                            </div>
+                <div class="un-reg-footer">
+                        <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
+                        <button class="btn-back" id="bnt-submit">Register HOD</button>
+               </div>
+            </form>
+              </div>
+             </div>
+           </div>
+         <div class="un-footer">
+          <button class="btn-back" id="bnt-back-home-n">Back to home</button>
+         </div>
+       </div>
+       <!-- End of faculty  definition --> 
+ </div>
+       <script src="../../js/add-hod.js"></script>
+    </body>
+</html>
