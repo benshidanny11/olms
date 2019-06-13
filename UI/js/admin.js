@@ -104,3 +104,7 @@ document.getElementById("verified-lects").addEventListener('click',()=>{
 document.getElementById("unverified-lects").addEventListener('click',()=>{
     window.location.href = '../../html/admin/unverified-lecturers.html'; 
 });
+
+document.getElementById("available-lects-div").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/available-lecturers.html'; 
+});
