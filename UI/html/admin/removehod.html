@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>
+            olms - Remove HOD
+        </title>
+        <link rel="stylesheet" href="../../css/remove-univ.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
+    </head>
+    <body>
+        <!-- Alert definition -->
+       <div class="alert-container" id="alert-mother">
+                <div id="alert">
+                    <div class="alert-header">
+                           <p class="p-head">Confirm remove HOD</p>
+                     </div>
+                     <div class="alert-body">
+                        <p class="p-warning"> Are you sure you want to remove HOD?</p>
+                    </div>
+                    <div class="alert-footer">
+                            <button class="btns-alert" onclick="noRemove()">No</button> <button class="btns-alert" onclick="remove()">Yes</button>
+                     </div>
+                </div>
+            </div>
+    <!-- Alert definition end -->
+
+
+    <!-- For head -->
+    <div class="main">
+     <div class="head">
+        <div class="dropdown">
+            <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../login.html">Logout</a>
+                <a href="setting.html">Account setting</a>
+            </div>
+        </div>
+     </div>
+     <div class="bodycontainer" onmousemove="hideDropdown()">
+
+            <!-- Lecturer activities -->
+            <div class="hod-activities" id="panel-hod-act">
+             <div class="content-head">
+                 <p class="p-head">Remove HOD</p>
+               </div>
+              <div class="info-container">
+               <table width="1200">
+                    <tr class="data-row">
+                        <td class="img-holder">
+                        </td>
+                        <td class="data">
+              
+                        </td>
+                        <td class="data">
+                            <div class="univ-data-search">
+                             <input type="text" name="university-query" placeholder="Type university to remove" id="txt-search"/><button id="btn-search"><img src="../../assets/images/search-img.png" alt="" width="20" height="20px"></button>
+                            </div>
+                        </td>
+                 </tr>
+                 <tr class="data-row">
+                     <td class="img-holder">
+                        <div class="univ-data">
+                            <p> Uwitonze Alfred</p>
+                           </div>
+                     </td>
+                     <td class="data">
+                         <div class="univ-data">
+                          <p>Computer science</p>
+                         </div>                
+                     </td>
+                     <td class="data">
+                         <div class="univ-data">
+                                <button class="btn-remove-univ">
+                                   - Remove this HOD
+                                </button>
+                         </div>
+                     </td>
+                 </tr>
+                 <tr class="data-row">
+                        <td class="img-holder">
+                            <div class="univ-data">
+                              <p> Semana Emmanuel</p>
+                            </div>   
+                        </td>
+                        <td class="data">
+                            <div class="univ-data">
+                             <p> Finance</p>
+                            </div>                
+                        </td>
+                        <td class="data">
+                            <div class="univ-data">
+                                    <button class="btn-remove-univ">
+                                       - Remove this HOD
+                                    </button>
+                            </div>
+                        </td>
+                    </tr>
+                 
+               </table>
+              </div>
+             <div class="un-footer">
+              <button class="btn-back" id="bnt-back-home-n">Back to home</button>
+             </div>
+           </div>
+           <!-- End of lecturer  panel definition --> 
+     </div>
+    </div>
+     <script src="../../js/remove-univ.js"></script>
+    </body>
+</html>

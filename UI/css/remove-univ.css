@@ -309,6 +309,7 @@ html {
     height: 40px; 
     color: rgb(60, 0, 156);
     padding-top: 8px;
+    padding-left: 5px;
   }
   .img-holder{
     width: 400px;   
