@@ -60,13 +60,17 @@ function preventBack() { window.history.forward(); }
 setTimeout("preventBack()", 0);
 window.onunload = function () { null };
 document.getElementById("div-add-univ").addEventListener("click",() => {
-    window.location.href = '../../html/admin/add_uni.html';
+    document.getElementById("panel-univ").style.display="none"; 
+    document.getElementById("panel-dep").style.display="block";  
 });
+// Modification not view all universities but to manage faculties.
 document.getElementById("view-all-univ").addEventListener("click",() => {
-    window.location.href = '../../html/admin/view_univ.html';
+    document.getElementById("panel-univ").style.display="none"; 
+    document.getElementById("panel-fac").style.display="block";  
 });
 document.getElementById("div-reove-univ").addEventListener("click",()=>{
-    window.location.href = '../../html/admin/remove-univ.html';
+    document.getElementById("panel-univ").style.display="none"; 
+    document.getElementById("panel-cou").style.display="block"; 
 });
 document.getElementById("add-fac").addEventListener("click",()=>{
     window.location.href = '../../html/admin/add-fac.html';
@@ -112,5 +116,8 @@ document.getElementById("all-hods-div").addEventListener('click',()=>{
     window.location.href = '../../html/admin/all-hods.html'; 
 });
 document.getElementById("add-hod-div").addEventListener('click',()=>{
-    window.location.href = '../../html/admin/all-hods.html'; 
+    window.location.href = '../../html/admin/add-hod.html'; 
+});
+document.getElementById("remove-hod").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/removehod.html'; 
 });
