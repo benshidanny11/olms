@@ -1,0 +1,27 @@
+{
+  "name": "olms",
+  "version": "1.0.0",
+  "description": "This system (Online lecturer management system), is a system for making lecturers and universities stay connected. Any time a university needs a lecturer, head of department (HOD) is in charge of using this system to contact the lecturer who is qualified for a given course. This system (Online lecturer management system), is a system for making lecturers and universities stay connected. Any time a university needs a lecturer, head of department (HOD) is in charge of using this system to contact the lecturer who is qualified for a given course. ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benshidanny11/olms.git"
+  },
+  "author": "Urimubenshi Daniel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benshidanny11/olms/issues"
+  },
+  "homepage": "https://github.com/benshidanny11/olms#readme",
+  "dependencies": {
+    "pg": "^7.11.0"
+  }
+  ,
+  "keywords": [
+    "node",
+    "express"
+  ]
+}

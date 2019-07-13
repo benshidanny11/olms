@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>olms - post schedule</title>
+        <link rel="stylesheet" href="../../css/post-scedule.css">
+    </head>
+<body>
+        <!-- For head -->
+        <div class="head">
+                <div class="dropdown">
+                  <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+                  <div id="myDropdown" class="dropdown-content">
+                      <a href="../login.html">Logout</a>
+                      <a href="setting.html">Account setting</a>
+                    </div>
+               </div>
+          
+              </div>
+
+              <div class="bodycontainer" onmousemove="hideDropdown()">
+
+                    <!-- University information -->
+                    <div class="hod-activities" id="panel-hod-act">
+                     <div class="content-head">
+                         <p class="p-head">Post schedule</p>
+                       </div>
+                       <div class="inner-content-container">
+                         <div class="hod-content">
+                          <div class="inner-reg">
+                              <form action="./dashboard.html">
+                            
+
+                            <div class="input-container">
+                                    <select name="course"  class="txts col1">
+                                     <option value="">--Select course--</option>
+                                     <option value="">Database management system</option>
+                                     <option value="">Programing with c++</option>
+                                    </select>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="quailification" placeholder="Required qualification" class="txts" >
+                            </div>
+                            <div class="input-container">
+                                <input type="number" name="experience" placeholder="Experience (Years)" class="txts" >
+                            </div>
+                            <div class="input-container">
+                                <textarea type="t" name="desription" placeholder="Short desription on schedule" class="txts textarea" ></textarea>
+                            </div>
+                            
+                            <div class="inner-info">
+                                <p class="p" id="p-info"> Duration</p>
+                           </div>
+                            <div class="input-container">
+                                <input type="date" name="datefrom" placeholder="Date from" class="txts col1">
+                                <input type="text" name="txtdatefromdisplay" placeholder="" class="txts" hidden>
+                           </div>
+                            <div class="input-container">
+                                <input type="date" name="dateto" placeholder="Date to" class="txts col1">
+                                <input type="text" name="txtdatetodisplay" placeholder="" class="txts" hidden>
+                            </div>
+                            <div class="un-reg-footer">
+                                <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
+                                <button class="btn-back" id="bnt-submit">Post shcedule</button>
+                           </div>
+                        </form>
+                          </div>
+                         </div>
+                       </div>
+                     <div class="un-footer">
+                      <button class="btn-back" id="bnt-back-home-n">Back to home</button>
+                     </div>
+                   </div>
+                   <!-- End of university  definition --> 
+             </div>
+    
+    <script src="../../js/post-scedule.js"></script>
+</body>
+</html>
