@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>olms - new admin</title>
+        <link rel="stylesheet" href="../../css/add-hod.css">
+    </head>
+    
+    <body>
+            <!-- For head -->
+<div class="main">
+    <div class="head">
+        <div class="dropdown">
+            <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="../login.html">Logout</a>
+                <a href="setting.html">Account setting</a>
+            </div>
+    </div>
+</div>
+
+        
+<div class="bodycontainer" onmousemove="hideDropdown()">
+
+        <!-- Faculty information -->
+        <div class="hod-activities" id="panel-hod-act">
+         <div class="content-head">
+             <p class="p-head">Register new admin</p>
+           </div>
+           <div class="inner-content-container">
+             <div class="hod-content">
+              <div class="inner-reg">
+                  <form action="./dashboard.html">
+                    <div class="inner-info">
+                            <p class="p" id="p-info">Personal information</p>
+                          </div>
+                            <div class="input-container">
+                                <input type="text" name="firtname" placeholder="First name" class="txts col1">
+                                <input type="text" name="lastname" placeholder="Last name" class="txts col2">
+                                </div>
+                            <div class="input-container">
+                                <input type="email" name="email" placeholder="admin@example.com" class="txts col1">
+                                <input type="text" name="phone" placeholder="Admin's phone number" class="txts col2">
+                            </div>
+                            <div class="input-container">
+                                <input type="text" name="username" placeholder="User name" class="txts col1">
+                                <input type="text" name="phone" placeholder="Admin type" class="txts col2">
+                            </div>
+                            <div class="inner-info">
+                                    <p class="p" id="p-info">Credencials information</p>
+                            </div>
+                            <div class="input-container">
+                                <input type="password" name="password" placeholder="Password" class="txts col1 pwds" >
+                                <input type="password" name="confirm-pass" placeholder="Cofirm password" class="txts col2 pwds">
+                            </div>
+                <div class="un-reg-footer">
+                        <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
+                        <button class="btn-back" id="bnt-submit">Register Admin</button>
+               </div>
+            </form>
+              </div>
+             </div>
+           </div>
+         <div class="un-footer">
+          <button class="btn-back" id="bnt-back-home-n">Back to home</button>
+         </div>
+       </div>
+       <!-- End of faculty  definition --> 
+ </div>
+       <script src="../../js/add-hod.js"></script>
+    </body>
+</html>

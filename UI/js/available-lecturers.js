@@ -16,7 +16,8 @@ document.getElementById("bnt-back-home-n").addEventListener('click',() =>{
     window.location.href = '../../html/admin/dashboard.html';
 });
 document.body.onclick = function (ev) {
-if (ev.target.getAttribute("class") == "btn-add-level") {
-  window.location.href = '../../html/admin/add-course.html';
-}
-};
+  if (ev.target.getAttribute("class") == "btn-more") {
+    window.location.href = '../../html/admin/aboutverifiedlects.html';
+  }
+  };
+  

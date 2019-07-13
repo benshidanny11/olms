@@ -13,10 +13,10 @@ function hideDropdown(){
     }
 }
 document.getElementById("bnt-back-home-n").addEventListener('click',() =>{
-    window.location.href = '../../html/admin/dashboard.html';
+    window.location.href = '../../html/hod/dashboard.html';
 });
 document.body.onclick = function (ev) {
 if (ev.target.getAttribute("class") == "btn-more") {
-  window.location.href = '../../html/admin/aboutlecturers.html';
+  window.location.href = '../../html/hod/lectinfo.html';
 }
 };

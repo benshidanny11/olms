@@ -121,3 +121,9 @@ document.getElementById("add-hod-div").addEventListener('click',()=>{
 document.getElementById("remove-hod").addEventListener('click',()=>{
     window.location.href = '../../html/admin/removehod.html'; 
 });
+document.getElementById("add-new-admin").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/newadmin.html'; 
+});
+document.getElementById("view-all-admins").addEventListener('click',()=>{
+    window.location.href = '../../html/admin/alladmins.html'; 
+});
