@@ -28,21 +28,14 @@
                    <div class="inner-content-container">
                      <div class="hod-content">
                       <div class="inner-reg">
-                          <form action="./dashboard.html">
+                          <form action="/addschool" method="POST">
 
                         <div class="input-container">
-                                <input type="text" name="fac-name" placeholder="Faculty name" class="txts col1">
-                        </div>
-                        <div class="input-container">
-                                <select name="university-name"  class="txts col1">
-                                 <option value="">--Select university--</option>
-                                 <option value="">Kigali independent university (ULK)</option>
-                                 <option value=""> University of Lay Adventists of Kigali (UNILAK)</option>
-                                </select>
+                                <input type="text" name="schoolname" placeholder="Faculty name" class="txts col1">
                         </div>
                         <div class="un-reg-footer">
-                                <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
-                                <button class="btn-back" id="bnt-submit">Register faculty</button>
+                                <input type="reset" class="btn-back" id="bnt-reset" value="Reset">
+                                <input type="submit" class="btn-back" id="bnt-submit" value="Register faculty"/>
                        </div>
                     </form>
                       </div>

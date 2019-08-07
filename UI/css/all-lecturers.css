@@ -300,23 +300,23 @@ html {
     transition: 1s;
   }
   .data{
-    width: 240px;
+    width: 245px;
     height: 40px; 
   }
   .univ-data
   {
-    width: 240px; 
+    width: 245px; 
     height: 40px; 
     color: rgb(60, 0, 156);
     padding-top: 8px;
     padding-left: 10px;
   }
   .img-holder{
-    width: 240px;   
+    width: 245px;   
   }
   .img-holder-div{
     padding-left: 10px;
-    width: 240px;    
+    width: 245px;    
   }
   .data-search{
     width: 400px;
@@ -345,7 +345,7 @@ html {
   #txt-search:focus{
     outline: none;
     box-shadow: 0px 0px 4px rgb(60, 0, 156);
-  
+    
   }
   #btn-search{
   margin-left: 2px;
@@ -370,20 +370,20 @@ html {
   .btn-more{
   box-shadow: 0 2px 4px 0 rgba(141, 52, 219, 0.2), 0 3px 10px 0 rgba(134, 57, 155, 0.19);
   border-radius: 5px;
-  width: 200px;
+  width: 160px;
   background-color: rgb(241, 241, 241);
   height: 30px;
   border: none;
   color: rgb(111, 51, 207);
   outline: none;
-  margin-left: 35px;
+  margin-left: 50px;
   }
   .btn-add-fac:hover{
   background-color: rgb(247, 247, 247);
   text-decoration: underline;
   }
   .add-fac{
-  width: 240px; 
+  width: 245px; 
   height: 40px; 
   color: rgb(60, 0, 156);
   padding-top: 4px;

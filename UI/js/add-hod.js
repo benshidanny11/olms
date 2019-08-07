@@ -17,4 +17,25 @@ function dropdown(){
 document.getElementById("bnt-back-home-n").addEventListener("click",()=>{
     window.location.href = '../../html/admin/dashboard.html';
 });
+
+function addAdmin(){
+  fetch('http://localhost:6070/api/addadmin', {  
+    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+      method: 'POST',
+      body: JSON.stringify(
+        { 
+          email: document.getElementById("email").value,
+          password: document.getElementById("password").value 
+        }),
+  }).then(responce => responce.json()).then(res => {
+    console.log(res);
+    if(res.status === 200){
+      const { token } = res.data;
+      localStorage.setItem('TESLA_TOKEN', token);
+      window.location.href='users.html'
+    } else {
+      console.log("Incorrect password");
+    }
+  }).catch(error=>console.log(error));
+}
   

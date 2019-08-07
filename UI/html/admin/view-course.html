@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../../css/veiw-course.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
     </head>
-    <body>
+    <body onload="getCourceInfo()">
             <!-- For head -->
      <div class="head">
             <div class="dropdown">
@@ -25,7 +25,7 @@
                      <p class="p-head">All courses information</p>
                    </div>
                   <div class="info-container">
-                   <table width="1200">
+                   <table width="1200" id="table_cource_data">
                         <tr class="data-row-search">
                             <td class="data-search">
                             </td>
@@ -37,47 +37,7 @@
                                  <input type="text" name="university-query" placeholder="Type course name" id="txt-search"/><button id="btn-search"><img src="../../assets/images/search-img.png" alt="" width="20" height="20px"></button>
                                 </div>
                             </td>
-                     </tr>
-                     <tr class="data-row">
-                         <td class="img-holder">
-                         <div class="univ-data">
-                                <p class="p-nuniv-name"> CS001</p>
-                            </div>
-                         </td>
-                         <td class="data">
-                             <div class="univ-data">
-                              <p class="p-nuniv-name"> Database management systems</p>
-                             </div>                
-                         </td>
-                         <td class="data">
-    
-                            </td>
-                         <td class="data">
-                            <div class="univ-data">
-                                <p class="p-nuniv-name"> Computer  science</p>
-                             </div>
-                         </td>
-                     </tr>
-                     <tr class="data-row">
-                        <td class="img-holder">
-                        <div class="univ-data">
-                               <p class="p-nuniv-name"> CS002</p>
-                           </div>
-                        </td>
-                        <td class="data">
-                            <div class="univ-data">
-                             <p class="p-nuniv-name"> Data structure and algorithm</p>
-                            </div>                
-                        </td>
-                        <td class="data">
-   
-                           </td>
-                        <td class="data">
-                           <div class="univ-data">
-                               <p class="p-nuniv-name"> Computer  science</p>
-                            </div>
-                        </td>
-                    </tr>                    
+                     </tr>                  
                    </table>
                   </div>
                  <div class="un-footer">
