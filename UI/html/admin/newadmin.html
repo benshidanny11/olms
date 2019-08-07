@@ -28,32 +28,32 @@
            <div class="inner-content-container">
              <div class="hod-content">
               <div class="inner-reg">
-                  <form action="./dashboard.html">
+                  <form id="addadminform" action="/addadmin" method="POST">
                     <div class="inner-info">
                             <p class="p" id="p-info">Personal information</p>
                           </div>
                             <div class="input-container">
-                                <input type="text" name="firtname" placeholder="First name" class="txts col1">
-                                <input type="text" name="lastname" placeholder="Last name" class="txts col2">
+                                <input type="text" name="firstname" placeholder="First name" class="txts col1" id="fname">
+                                <input type="text" name="lastname" placeholder="Last name" class="txts col2" id="lname">
                                 </div>
                             <div class="input-container">
-                                <input type="email" name="email" placeholder="admin@example.com" class="txts col1">
-                                <input type="text" name="phone" placeholder="Admin's phone number" class="txts col2">
+                                <input type="email" name="email" placeholder="admin@example.com" class="txts col1" id="email">
+                                <input type="text" name="phone" placeholder="Admin's phone number" class="txts col2" id="phone">
                             </div>
                             <div class="input-container">
-                                <input type="text" name="username" placeholder="User name" class="txts col1">
-                                <input type="text" name="phone" placeholder="Admin type" class="txts col2">
+                                <input type="text" name="username" placeholder="User name" class="txts col1" id="username">
+                                <input type="text" name="admintype" placeholder="Admin type" class="txts col2" id="admintype">
                             </div>
                             <div class="inner-info">
                                     <p class="p" id="p-info">Credencials information</p>
                             </div>
                             <div class="input-container">
-                                <input type="password" name="password" placeholder="Password" class="txts col1 pwds" >
-                                <input type="password" name="confirm-pass" placeholder="Cofirm password" class="txts col2 pwds">
+                                <input type="password" name="password" placeholder="Password" class="txts col1 pwds" id="password">
+                                <input type="password" name="confirm_password" placeholder="Cofirm password" class="txts col2 pwds">
                             </div>
                 <div class="un-reg-footer">
                         <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
-                        <button class="btn-back" id="bnt-submit">Register Admin</button>
+                        <input type="submit" class="btn-back" id="bnt-submit" onclick="addAdmin()" value="Register Admin"/>
                </div>
             </form>
               </div>
@@ -65,6 +65,6 @@
        </div>
        <!-- End of faculty  definition --> 
  </div>
-       <script src="../../js/add-hod.js"></script>
+       <script src="../../js/addadmin.js"></script>
     </body>
 </html>

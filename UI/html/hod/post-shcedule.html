@@ -3,13 +3,13 @@
         <title>olms - post schedule</title>
         <link rel="stylesheet" href="../../css/post-scedule.css">
     </head>
-<body>
+<body onload="getData()">
         <!-- For head -->
         <div class="head">
                 <div class="dropdown">
                   <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="47px" height="47px"></div>
                   <div id="myDropdown" class="dropdown-content">
-                      <a href="../login.html">Logout</a>
+                      <a href="../../html/login.html">Logout</a>
                       <a href="setting.html">Account setting</a>
                     </div>
                </div>
@@ -26,40 +26,36 @@
                        <div class="inner-content-container">
                          <div class="hod-content">
                           <div class="inner-reg">
-                              <form action="./dashboard.html">
+                              <form action="/postschedule" method="POST">
                             
 
                             <div class="input-container">
-                                    <select name="course"  class="txts col1">
-                                     <option value="">--Select course--</option>
-                                     <option value="">Database management system</option>
-                                     <option value="">Programing with c++</option>
-                                    </select>
+                                <select name="courcename"  class="txts col1" id="cources">
+                                    <option value="">--Select course--</option>
+                                </select>
                             </div>
                             <div class="input-container">
-                                <input type="text" name="quailification" placeholder="Required qualification" class="txts" >
+                                <input type="text" name="qualification" placeholder="Required qualification" class="txts" >
                             </div>
                             <div class="input-container">
                                 <input type="number" name="experience" placeholder="Experience (Years)" class="txts" >
                             </div>
                             <div class="input-container">
-                                <textarea type="t" name="desription" placeholder="Short desription on schedule" class="txts textarea" ></textarea>
+                                <textarea name="description" placeholder="Short desription on schedule" class="txts textarea" ></textarea>
                             </div>
                             
                             <div class="inner-info">
                                 <p class="p" id="p-info"> Duration</p>
                            </div>
                             <div class="input-container">
-                                <input type="date" name="datefrom" placeholder="Date from" class="txts col1">
-                                <input type="text" name="txtdatefromdisplay" placeholder="" class="txts" hidden>
+                                <input type="date" name="fromdate" placeholder="Date from" class="txts col1">
                            </div>
                             <div class="input-container">
-                                <input type="date" name="dateto" placeholder="Date to" class="txts col1">
-                                <input type="text" name="txtdatetodisplay" placeholder="" class="txts" hidden>
+                                <input type="date" name="todate" placeholder="Date to" class="txts col1">
                             </div>
                             <div class="un-reg-footer">
-                                <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
-                                <button class="btn-back" id="bnt-submit">Post shcedule</button>
+                                <input type="reset" class="btn-back" id="bnt-reset" value="Reset"> 
+                                <input type="submit" class="btn-back" id="bnt-submit" value="Post shcedule">
                            </div>
                         </form>
                           </div>

@@ -17,3 +17,22 @@ function dropdown(){
     document.getElementById("bnt-back-home-n").addEventListener('click',() =>{
         window.location.href = '../../html/hod/dashboard.html';
     });
+
+    function getData(){
+      var select =document.getElementById('cources');
+      fetch('http://localhost:6070/allcources')
+      .then(responce => responce.json()).then(res => {
+        //res.foreach()
+          res.Cources.forEach(function(courses){
+            var opt=document.createElement('option');
+            opt.value=courses.course_name;
+            opt.innerHTML=courses.course_name;
+            select.appendChild(opt)
+          });
+          
+            console.log(res.Cources);
+        
+      }).catch(error=>console.log(error));
+    }
+
+    

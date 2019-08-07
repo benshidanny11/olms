@@ -29,18 +29,23 @@
                     <div class="inner-content-container">
                     <div class="hod-content">
                         <div class="inner-reg">
-                            <form action="./dashboard.html">
+                            <form action="/adddepartment" method="POST">
 
                         <div class="input-container">
-                                <input type="text" name="dep-name" placeholder="department name" class="txts col1">
+                                <input type="text" name="depName" placeholder="department name" class="txts col1">
                         </div>
                         <div class="input-container">
-                                <select name="fac-name"  class="txts col1">
+                                <select name="schName"  class="txts col1">
                                 <option value="">--Select faculty--</option>
-                                <option value="">Faculty of computing & information sciences</option>
-                                <option value=""> School of science and Technology</option>
+                                <option value="School of Social Sciences">School of Social Sciences</option>
+                                <option value="School of Economics and Business Studie"> School of Economics and Business Studie</option>
+                                <option value="School of Science and Technology"> School of Science and Technology</option>
+                                <option value="School of Law">School of Law</option>
                                 </select>
                         </div>
+                        <div class="input-container">
+                            <input type="number" name="levels" placeholder="Number of classes" class="txts col1">
+                    </div>
                         <div class="un-reg-footer">
                                 <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
                                 <button class="btn-back" id="bnt-submit">Register department</button>

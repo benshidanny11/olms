@@ -28,13 +28,13 @@
            <div class="inner-content-container">
              <div class="hod-content">
               <div class="inner-reg">
-                  <form action="./dashboard.html">
+                  <form action="/addhod" method="POST">
                     <div class="inner-info">
                             <p class="p" id="p-info">Personal information</p>
                           </div>
                             <div class="input-container">
-                                <input type="text" name="firtname" placeholder="First name" class="txts col1">
-                                <input type="text" name="lastname" placeholder="Last name" class="txts col2">
+                                <input type="text" name="fname" placeholder="First name" class="txts col1">
+                                <input type="text" name="lname" placeholder="Last name" class="txts col2">
                                 </div>
                             <div class="input-container">
                                 <input type="email" name="email" placeholder="hod@example.com" class="txts col1">
@@ -44,15 +44,22 @@
                                 <p class="p" id="p-info">Academic informaitlon</p>
                           </div>
                             <div class="input-container">
-                                <select name="qualification" id="" class="txts col1">
-                                    <option value="">--Select university--</option>
-                                    <option value="">Kigali Independent university</option>
-                                    <option value=""> University of Lay Adventists of Kigali (UNILAK)</option>
+                                <select name="schName" id="" class="txts col1">
+                                    <option value="">--Select school--</option>
+                                    <option value="School of Economics and Business Studies">School of Economics and Business Studies</option>
+                                    <option value="School of Science and Technology">School of Science and Technology</option>
+                                    <option value="School of Law"> School of Law</option>
+                                    <option value="School of Social Sciences"> School of Social Sciences</option>
                                 </select>
-                                <select name="category" id="" class="txts col2">
-                                        <option value="">--Select department--</option>
-                                    <option value="">Computer science</option>
-                                    <option value="">Economic and business studies</option>
+                                <select name="depName" id="" class="txts col2">
+                                    <option value="">--Select department--</option>
+                                    <option value="Computer science">Computer science</option>
+                                    <option value="Economic">Economic</option>
+                                    <option value="Accounting">Accounting</option>
+                                    <option value="Law">Law</option>
+                                    <option value="Population studies">Population studies</option>
+                                    <option value="Development Studies">Development Studies</option>
+                                    <option value="International Relations">International Relations</option>
                                 </select>
                             </div>
                             <div class="inner-info">
@@ -60,11 +67,11 @@
                             </div>
                             <div class="input-container">
                                 <input type="password" name="password" placeholder="Password" class="txts col1 pwds"  onpaste="return false;">
-                                <input type="password" name="confirm-password" placeholder="Cofirm password" class="txts col2 pwds"  onpaste="return false;">
+                                <input type="password" name="confirm_password" placeholder="Cofirm password" class="txts col2 pwds"  onpaste="return false;">
                             </div>
                 <div class="un-reg-footer">
-                        <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
-                        <button class="btn-back" id="bnt-submit">Register HOD</button>
+                        <input type="reset" class="btn-back" id="bnt-reset" value="Reset"/>
+                        <input type="submit" class="btn-back" id="bnt-submit" value="Register HOD"/>
                </div>
             </form>
               </div>

@@ -29,41 +29,47 @@
                     <div class="inner-content-container">
                     <div class="hod-content">
                         <div class="inner-reg">
-                     <form action="./dashboard.html">
+                     <form action="/addcource" method="POST">
                         <div class="input-container">
-                                <input type="text" name="course-code" placeholder="Course code" class="txts col1">
+                                <input type="text" name="course_code" placeholder="Course code" class="txts col1">
                         </div>                        
                         <div class="input-container">
-                                <input type="text" name="course-name" placeholder="Course name" class="txts col1">
+                                <input type="text" name="course_name" placeholder="Course name" class="txts col1">
                         </div>
                         <div class="input-container">
-                                <input type="number" name="course-credit" placeholder="Course credit" class="txts col1">
+                                <input type="number" name="course_credits" placeholder="Course credit" class="txts col1">
                         </div>
                         <div class="input-container">
                                 <select name="level"  class="txts col1">
                                 <option value="">--Select level--</option>
-                                <option value="">Year 1</option>
-                                <option value=""> Year 2</option>
-                                <option value=""> Year 3</option>
-                                <option value=""> Year 4</option>
-                                <option value=""> Year 5</option>
+                                <option value="Year 1">Year 1</option>
+                                <option value="Year 2">Year 2</option>
+                                <option value="Year 3">Year 3</option>
+                                <option value="Year 4">Year 4</option>
+                                <option value="Year 5">Year 5</option>
                                 </select>
                         </div>
                         <div class="input-container">
-                                <select name="university-name"  class="txts col1">
+                                <select name="depname"  class="txts col1">
                                 <option value="">--Select department--</option>
-                                <option value="">Computer science</option>
-                                <option value=""> Finance</option>
-                                <option value=""> Law</option>
-                                <option value=""> Social sciences</option>
+                                <option value="Computer science">Computer science</option>
+                                <option value="Finance">Finance</option>
+                                <option value="Law">Law</option>
+                                <option value="Rural Development">Rural Development</option>
+                                <option value="Population studies">Population studies</option>
+                                <option value="Development Studies">Development Studies</option>
+                                <option value="Social sciences">Social sciences</option>
+                                <option value="International Relations">International Relations</option>
+                                <option value="Economics">Economics</option>
+                                <option value="Accounting">Accounting</option>
                                 </select>
                         </div>                       
                         <div class="un-reg-footer">
-                                <button type="reset" class="btn-back" id="bnt-reset">Reset</button> 
-                                <button class="btn-back" id="bnt-submit">Register course</button>
+                                <input type="reset" class="btn-back" id="bnt-reset" value="Reset"/>
+                                <input type="submit" class="btn-back" id="bnt-submit" class="Register course">
                         </div>
                     </form>
-                        </div>
+                    </div>
                     </div>
                     </div>
                 <div class="un-footer">
