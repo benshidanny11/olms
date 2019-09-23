@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../../css/remove-univ.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
     </head>
-    <body>
+    <body onload="getAllAdmins()">
           <!-- Alert definition -->
        <div class="alert-container" id="alert-mother">
         <div id="alert">
@@ -43,7 +43,7 @@
          <p class="p-head">All admins</p>
        </div>
       <div class="info-container">
-       <table width="1200">
+       <table width="1200" id="table_admin_info">
             <tr class="data-row">
                 <td class="img-holder">
                 </td>
@@ -56,44 +56,7 @@
                     </div>
                 </td>
          </tr>
-         <tr class="data-row">
-             <td class="img-holder">
-                <div class="univ-data">
-                    <p> admin123</p>
-                   </div>
-             </td>
-             <td class="data">
-                 <div class="univ-data">
-                  <p>Default admin</p>
-                 </div>                
-             </td>
-             <td class="data">
-                 <div class="univ-data">
-                        <button class="btn-remove-univ">
-                            Remove this admin
-                        </button>
-                 </div>
-             </td>
-         </tr>
-         <tr class="data-row">
-                <td class="img-holder">
-                    <div class="univ-data">
-                      <p> admin234</p>
-                    </div>   
-                </td>
-                <td class="data">
-                    <div class="univ-data">
-                     <p> other</p>
-                    </div>                
-                </td>
-                <td class="data">
-                    <div class="univ-data">
-                            <button class="btn-remove-univ">
-                                Remove this admin
-                            </button>
-                    </div>
-                </td>
-            </tr>
+        
          
        </table>
       </div>
@@ -104,6 +67,6 @@
    <!-- End of lecturer  panel definition --> 
 </div>
 </div>
-<script src="../../js/remove-univ.js"></script>
+<script src="../../js/alladmins.js"></script>
     </body>
 </html>

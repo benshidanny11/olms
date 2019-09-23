@@ -4,7 +4,7 @@ import User from '../controller/User';
 import Admin from '../controller/Admin';
 const userRouter = express.Router();
 userRouter.post('/dashboard',User.login);
-
+//userRouter.get('/hod/dashboard',User.hodLogin);
 userRouter.post('/api/login',User.apiLogin);
 
 export default userRouter;

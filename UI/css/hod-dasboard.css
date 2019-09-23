@@ -315,3 +315,6 @@ html {
     outline: none;
     text-align: center ;
   }
+  .h_ignore{
+   display: none;
+  }

@@ -59,7 +59,7 @@ class Lecturer{
   
         const userData=
         [
-          u_id,fname,lname,email,phone,userRole,adminType,email,encoder.encode(password),formatedDate
+          u_id,fname,lname,email,phone,userRole,adminType,email,password,formatedDate
         ];
         const lecturerData=[ u_id,fname,lname,email,phone,address,nationalId,cvPath,degreePath,qualification,category,status];
   
@@ -88,39 +88,50 @@ class Lecturer{
         }) ;
        }
       });
-
-    //  }).catch(error => res.status(400).send({
-    //   status: 400,
-    //   error: { message: error.message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '') },
-    // }));
     }
     async apply(req,res){
       
      joi.validate(req.body,Valitator.Validate.apply).then(()=>{
-      var lectId=req.user.id;
+      var lectId=req.body.lectId;
       var id=uuidv4();
-      var courseCode=req.body.coursecode;
+      var courseCode=req.body.courseCode;
       var status="pending";
       var duration= req.body.duration;
-      QueryExecuter.queryParams(queryString.getLecturerUser,[req.user.id]).then((userRes)=>{
-        if(userRes.rows[0]){
-          QueryExecuter.queryParams(queryString.apply,[id,lectId,courseCode,status,duration]).then((applyRes)=>{
-              if(applyRes.rows[0]){
-                  res.send(
-                      {
-                      Status:200,
-                      Message:'Appication is sent successfully'
-                      }
-                      );
-              }
-          })
+
+     // console.log(lectId+" "+courseCode+" "+duration);
+
+      QueryExecuter.queryParams(queryString.checkIfApplicationExists,[duration]).then((applResult)=>{
+        if(applResult.rows[0]){
+          res.send({
+            Status:400,
+            Message:`You have already applied to this schedule` 
+          });   
         }else{
-        res.send({
-          Status:400,
-          Message:`You are not lecturer` 
-        });         
+          QueryExecuter.queryParams(queryString.getLecturerById,[lectId]).then((userRes)=>{
+            if(userRes.rows[0]){
+              QueryExecuter.queryParams(queryString.apply,[id,lectId,courseCode,status,duration]).then((applyRes)=>{
+                  if(applyRes){
+                  //     res.send(
+                  //         {
+                  //         Status:200,
+                  //         Message:'Appication is sent successfully'
+                  //         }
+                  //         );
+    
+                  res.render('F:/my life/pro/ulk/final year project/olms/UI/html/lecturersuccessfully.html');
+                  }
+              })
+            }else{
+            res.send({
+              Status:400,
+              Message:`You are not lecturer` 
+            });         
+            }
+          });
         }
-      });
+      })
+
+    
      }).catch(error => res.status(400).send({
       status: 400,
       error: { message: error.message.replace(/[&\/\\#,+()$~%.'":*?<>{}]/g, '') },

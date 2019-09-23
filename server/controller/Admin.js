@@ -23,7 +23,7 @@ class Admin{
                 var phone =req.body.phone;
                 var admintype =req.body.admintype;
                 var username =req.body.username;
-                var password =encoder.encode(req.body.password); 
+                var password =req.body.password; 
                 var u_id=uuidv4();
                 const adminData=[u_id,firstname,lastname,email,phone,'admin',admintype,username,password,formatedDate];
                 QeryExecutor.queryParams(queryString.checkIfAdminExists,[email,phone]).then((resExist)=>{
@@ -86,64 +86,76 @@ class Admin{
          
               QeryExecutor.queryParams(StringQuery.getDepartmentId,[depName]).then((depIdRes)=>{
                 if(depIdRes.rows[0]){
-                  QeryExecutor.queryParams(StringQuery.getChoolId,[schName]).then((schIdRes)=>{
-                    if(schIdRes.rows[0]){
-                    var id=uuidv4();
-                    const hodData=[id,fname,lname,email,phone,schIdRes.rows[0].shc_name,depIdRes.rows[0].dep_name];
-                    const userData=
-                    [
-                      id,fname,lname,email,phone,'hod','none',email,encoder.encode(password),formatedDate
-                    ];
-                     QeryExecutor.queryParams(StringQuery.chechIfHodExists,[email,phone]).then((hodExistsRes)=>{
-                     if(hodExistsRes.rows[0]){
-                       console.log(hodExistsRes.rows[0]);
+                   
+                  QeryExecutor.queryParams(StringQuery.checkHodDepartment,[depIdRes.rows[0].dep_id]).then((hodDepRes)=>{
+                    if(hodDepRes.rows[0]){
                       res.status(400).send({
                         Status:400,
-                        Error:"Hod alread exists", 
+                        Error:"Department already has HOD!", 
                       });
-                     }
-                     else{
-                      QeryExecutor.queryParams(StringQuery.signup,userData).then((signUpRes)=>{
-                        if(signUpRes){
-
-                          QeryExecutor.queryParams(queryString.addHod,hodData).then((addHodRes)=>{
-                            if(addHodRes){
-                              // res.send(
-                              //   {
-                              //    Status:201,
-                              //    Message:"Hod added successfully"
-                              //   }
-                              //   )
-                                res.render('F:/my life/pro/ulk/final year project/olms/UI/html/successfully.html');
+                    }else{
+                      QeryExecutor.queryParams(StringQuery.getChoolId,[schName]).then((schIdRes)=>{
+                        if(schIdRes.rows[0]){
+                        var id=uuidv4();
+                        const hodData=[id,fname,lname,email,phone,schIdRes.rows[0].sch_id,depIdRes.rows[0].dep_id];
+                        const userData=
+                        [
+                          id,fname,lname,email,phone,'hod','none',email,password,formatedDate
+                        ];
+                         QeryExecutor.queryParams(StringQuery.chechIfHodExists,[email,phone]).then((hodExistsRes)=>{
+                         if(hodExistsRes.rows[0]){
+                           console.log(hodExistsRes.rows[0]);
+                          res.status(400).send({
+                            Status:400,
+                            Error:"Hod alread exists", 
+                          });
+                         }
+                         else{
+                          QeryExecutor.queryParams(StringQuery.signup,userData).then((signUpRes)=>{
+                            if(signUpRes){
+    
+                              QeryExecutor.queryParams(queryString.addHod,hodData).then((addHodRes)=>{
+                                if(addHodRes){
+                                  // res.send(
+                                  //   {
+                                  //    Status:201,
+                                  //    Message:"Hod added successfully"
+                                  //   }
+                                  //   )
+                                    res.render('F:/my life/pro/ulk/final year project/olms/UI/html/successfully.html');
+                                }else{
+                                  res.send({
+                                    Status:400,
+                                    Error:"Not added", 
+                                  }) 
+                                }
+                              });
                             }else{
                               res.send({
                                 Status:400,
                                 Error:"Not added", 
-                              }) 
+                              })
                             }
-                          });
+                            }).catch((err)=>{
+                              res.send({
+                                Status:400,
+                                Error:`Message: ${err.message}`, 
+                              })
+                            });
+                         }
+                         });
                         }else{
-                          res.send({
-                            Status:400,
-                            Error:"Not added", 
-                          })
+                         res.send({
+                           Status:400,
+                           Error:"This faculty doent exist", 
+                         }) 
                         }
-                        }).catch((err)=>{
-                          res.send({
-                            Status:400,
-                            Error:`Message: ${err.message}`, 
-                          })
-                        });
-                     }
-                     });
-                    }else{
-                     res.send({
-                       Status:400,
-                       Error:"This faculty doent exist", 
-                     }) 
+                      }
+                    )
                     }
-                  }
-                )
+                  })
+
+                
                 }else{
                  res.send({
                    Status:400,

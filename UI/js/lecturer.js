@@ -17,6 +17,8 @@ function dropdown(){
   
 
 document.getElementById("teaching-schedule").addEventListener("click",()=>{
+  var id=document.getElementById("h_lect_id").innerHTML;
+  localStorage.setItem("h_lect_id",id);
     window.location.href = '../../html/lecturer/teachingschedules.html';
 })
 document.getElementById("view-university").addEventListener("click",()=>{

@@ -3,7 +3,11 @@
         <title>olms - dashboard</title>
         <link rel="stylesheet" href="../../css/hod-dasboard.css">
     </head>
-    <body>
+    <p id="h_hod_id" class="h_ignore">{{userId}}</p>
+    <p id="h_hod_email" class="h_ignore">{{ email }}</p>
+    <p id="h_hod_userrole" class="h_ignore">{{ userRole }}</p>
+    <body >
+      
         <!-- For head -->
      <div class="head">
       <div class="dropdown">
@@ -19,6 +23,8 @@
       <div class="bodycontainer" onmousemove="hideDropdown()">
 
              <!-- For level activities -->
+             
+
              <div class="hod-activities" id="panel-hod-act">
               <div class="content-head">
                   <p class="p-head">All activities</p>
@@ -50,7 +56,7 @@
                         <div class="img-holder">
                            <img src="../../assets/images/post-schedule.png" alt="Course Image"  height="50px" width="60px">
                         </div>
-                        <p class="p-univ">Post schedule</p>
+                        <p id="p_post_schedule" class="p-univ">Post schedule</p>
                       </div>
                       <div class="manage-univ" id="existing-schedule">
                          <div class="img-holder">
@@ -68,7 +74,7 @@
                   </div>
                 </div>
               <div class="un-footer">
-              <p class="hod-name" id="bnt-hod-name">Hod's name </p>
+              <p class="hod-name" id="bnt-hod-name">{{ names }}</p>
               </div>
             </div>
             <!-- End of level panel definition --> 

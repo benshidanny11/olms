@@ -17,6 +17,6 @@ document.getElementById("btn-send-schedule").addEventListener('click',() =>{
   window.location.href = '../../html/hod/send-spec-schedule.html';
 });
 document.getElementById("btn-back-home").addEventListener('click',() =>{
-    window.location.href = '../../html/hod/dashboard.html';
+    window.location.href = '../../html/login.html';
   });
 

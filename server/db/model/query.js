@@ -9,12 +9,12 @@ const queryString = {
   addCourse:'INSERT INTO courses(course_code,course_name,level,course_credits,dep_id) VALUES($1,$2,$3,$4,$5)',
   addSchool:'INSERT INTO schools(sch_id,shc_name) VALUES($1,$2)',
   addUniversity:'INSERT INTO university(univ_id,univ_name,province,district,sector,cell,village,street) VALUES($1,$2,$3,$4,$5,$6,$7,$8)',
-  
   getAllSchools:'SELECT * FROM schools',
   getAllCourses:'SELECT * FROM courses NATURAL JOIN departments WHERE courses.dep_id=departments.dep_id',
-  getAllSchedule:'SELECT * FROM course_schedule NATURAL JOIN courses WHERE course_schedule.course_code=courses.course_code',
+  getAllCoursesForHod:'SELECT * FROM courses NATURAL JOIN departments WHERE courses.dep_id=$1',
+  getAllSchedule:'SELECT * FROM course_schedule NATURAL JOIN courses NATURAL JOIN hod_info WHERE hod_info.dep_id=courses.dep_id AND course_schedule.course_code=courses.course_code',
   getAllHods:'SELECT * FROM hod_info',
-  getAllHods1:'SELECT * FROM hod_info NATURAL JOIN schools NATURAL JOIN departments ',
+  getAllHods1:'SELECT * FROM hod_info NATURAL JOIN schools NATURAL JOIN departments WHERE hod_info.sch_id=schools.sch_id AND hod_info.dep_id=departments.dep_id',
   getAllLectulers:'SELECT * FROM lecturer',
   getAllDepartments:'SELECT * FROM departments NATURAL JOIN schools WHERE departments.sch_id=schools.sch_id',
   getAllAdmins:`SELECT * FROM users WHERE userrole='admin'`,
@@ -30,20 +30,28 @@ const queryString = {
   chechIfHodExists:'SELECT * FROM hod_info WHERE email=$1 OR phone=$2',
   chechIfDepartmentExists:'SELECT * FROM departments WHERE dep_name=$1',
   chechIfSchoolExist:'SELECT * FROM schools WHERE shc_name=$1',
+  checkHodDepartment:'SELECT * from hod_info where dep_id=$1',
   verifyLecturer: 'UPDATE lecturer SET status=$1 WHERE email=$2',
   checkIfCourseExitist:'SELECT * from courses WHERE course_code=$1 OR course_name =$2',
   checkIfUserIsVerified: `SELECT status FROM users WHERE email=$1 AND status='${USER_VERIFIED}'`,
+  checkIfApplicationExists:`SELECT * FROM application WHERE duration=$1`,
   resetPassword: 'UPDATE users SET password=$1 WHERE email=$2',
   getUserByPassword: 'SELECT * FROM users where password=$1',
   getAdminUser: `SELECT * FROM users where u_id=$1 and  userrole='admin'`,
   getHodUser:`SELECT * FROM users where u_id=$1 and  userrole='hod'`,
   getLecturerUser:`SELECT * FROM users where u_id=$1 and  userrole='lecturer'`,
+  getLecturerById:`SELECT * FROM lecturer where lect_id=$1`,
   getDepById:'SELECT * FROM departments WHERE dep_id=$1',
   getschById:'SELECT * FROM schools WHERE sch_id=$1',
+  getHodById:'SELECT * FROM hod_info NATURAL JOIN schools WHERE hod_info.sch_id=schools.sch_id AND hod_info.hod_id=$1',
+  getLectuerByCategory:`SELECT * FROM lecturer WHERE category=$1 AND status='verified'`,
+  getHodByEmail:'SELECT * FROM hod_info WHERE email=$1 ',
+  getLecturerByEmail:'SELECT * FROM lecturer WHERE email=$1',
   apply: `INSERT INTO application
   (appl_id,lect_id,course_code,status,duration)
    VALUES($1,$2,$3,$4,$5)`,
    getUserRole:'SELECT userrole from users where email=$1',
+   getallApplications:`SELECT * FROM application INNER JOIN  lecturer ON application.lect_id=lecturer.lect_id INNER JOIN courses ON application.course_code=courses.course_code`
   
 };
 export default queryString;

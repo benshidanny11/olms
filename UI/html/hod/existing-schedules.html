@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../../css/existing-schedules.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
     </head>
-    <body>
+    <body onload="getAllShedules()">
             <!-- For head -->
      <div class="head">
             <div class="dropdown">
@@ -25,52 +25,7 @@
                      <p class="p-head">All courses information</p>
                    </div>
                   <div class="info-container">
-                   <table width="1200" >
-                     <tr class="data-row">
-                         <td class="img-holder">
-                         <div class="univ-data">
-                                <p class="p-nuniv-name"> CS001</p>
-                            </div>
-                         </td>
-                         <td class="data">
-                             <div class="univ-data">
-                              <p class="p-nuniv-name"> Database management systems</p>
-                             </div>                
-                         </td>
-                         
-                         <td class="data">
-                            <div class="univ-data">
-                                <p class="p-nuniv-name">21/7/2019-20/8/2019</p>
-                             </div>
-                         </td>
-                         <td class="data">
-                            <div class="add-fac">
-                                <button class="btn-more">Remove schedule</button>
-                            </div>
-                        </td>
-                     </tr>
-                     <tr class="data-row">
-                        <td class="img-holder">
-                        <div class="univ-data">
-                               <p class="p-nuniv-name"> CS002</p>
-                           </div>
-                        </td>
-                        <td class="data">
-                            <div class="univ-data">
-                             <p class="p-nuniv-name"> Data structure and algorithm</p>
-                            </div>                
-                        </td>
-                        <td class="data">
-                           <div class="univ-data">
-                               <p class="p-nuniv-name">25/8/2019-15/9/2019</p>
-                            </div>
-                        </td>
-                        <td class="data">
-                            <div class="add-fac">
-                                <button class="btn-more">Remove schedule</button>
-                            </div>
-                        </td>
-                    </tr>                    
+                   <table width="1200" id="table_sched_data">                 
                    </table>
                   </div>
                  <div class="un-footer">

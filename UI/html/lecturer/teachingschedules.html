@@ -6,13 +6,13 @@
         <link rel="stylesheet" href="../../css/session.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
     </head>
-    <body>
+    <body onload="getAllShedules()">
             <!-- For head -->
      <div class="head">
             <div class="dropdown">
                 <div id="img-div" onclick="dropdown()"><img src="../../assets/images/user.png" alt="User image" width="40px" height="40px"></div>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="../login.html">Logout</a>
+                    <a href="/html/login.html">Logout</a>
                     <a href="setting.html">Account setting</a>
                 </div>
             </div>
@@ -25,52 +25,8 @@
                      <p class="p-head">All session posted</p>
                    </div>
                   <div class="info-container">
-                   <table width="800" >
-                     <tr class="data-row">
-                         <td class="img-holder">
-                         <div class="univ-data">
-                                <p class="p-nuniv-name">Database management systems</p>
-                            </div>
-                         </td>
-                         <td class="data">
-                             <div class="univ-data">
-                              <p class="p-nuniv-name"> Masters in Computer science 2 years(exp)</p>
-                             </div>                
-                         </td>
-                         
-                         <td class="data">
-                            <div class="univ-data">
-                                <p class="p-nuniv-name">21/7/2019-20/8/2019</p>
-                             </div>
-                         </td>
-                         <td class="data">
-                            <div class="add-fac">
-                                <button class="btn-more">Apply</button>
-                            </div>
-                        </td>
-                     </tr>
-                     <tr class="data-row">
-                        <td class="img-holder">
-                        <div class="univ-data">
-                               <p class="p-nuniv-name"> Data structure and algorithm</p>
-                           </div>
-                        </td>
-                        <td class="data">
-                            <div class="univ-data">
-                             <p class="p-nuniv-name">masters in Data sciences 1 year(exp)</p>
-                            </div>                
-                        </td>
-                        <td class="data">
-                           <div class="univ-data">
-                               <p class="p-nuniv-name">25/8/2019-15/9/2019</p>
-                            </div>
-                        </td>
-                        <td class="data">
-                            <div class="add-fac">
-                                <button class="btn-more">Apply</button>
-                            </div>
-                        </td>
-                    </tr>                    
+                   <table width="800" id="table_sched_data">
+                                     
                    </table>
                   </div>
                  <div class="un-footer">

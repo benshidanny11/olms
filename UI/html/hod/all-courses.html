@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="../../css/all-courses.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
     </head>
-    <body>
+    <body onload="getCourceInfo()">
             <!-- For head -->
      <div class="head">
             <div class="dropdown">
@@ -25,7 +25,7 @@
                      <p class="p-head">All courses information</p>
                    </div>
                   <div class="info-container">
-                   <table width="1200" >
+                   <table width="1200" id="table_cource_data">
                         <tr class="data-row-search">
                             <td class="data-search">
                             </td>
@@ -38,51 +38,7 @@
                                 </div>
                             </td>
                      </tr>
-                     <tr class="data-row">
-                         <td class="img-holder">
-                         <div class="univ-data">
-                                <p class="p-nuniv-name"> CS001</p>
-                            </div>
-                         </td>
-                         <td class="data">
-                             <div class="univ-data">
-                              <p class="p-nuniv-name"> Database management systems</p>
-                             </div>                
-                         </td>
-                         
-                         <td class="data">
-                            <div class="univ-data">
-                                <p class="p-nuniv-name">not done</p>
-                             </div>
-                         </td>
-                         <td class="data">
-                            <div class="add-fac">
-                                <button class="btn-more">Add to schedule</button>
-                            </div>
-                        </td>
-                     </tr>
-                     <tr class="data-row">
-                        <td class="img-holder">
-                        <div class="univ-data">
-                               <p class="p-nuniv-name"> CS002</p>
-                           </div>
-                        </td>
-                        <td class="data">
-                            <div class="univ-data">
-                             <p class="p-nuniv-name"> Data structure and algorithm</p>
-                            </div>                
-                        </td>
-                        <td class="data">
-                           <div class="univ-data">
-                               <p class="p-nuniv-name">not done</p>
-                            </div>
-                        </td>
-                        <td class="data">
-                            <div class="add-fac">
-                                <button class="btn-more">Add to schedule</button>
-                            </div>
-                        </td>
-                    </tr>                    
+                                   
                    </table>
                   </div>
                  <div class="un-footer">

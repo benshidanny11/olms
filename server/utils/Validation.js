@@ -26,7 +26,8 @@ class Validator {
       }),
       apply:joi.object().keys({
         duration: joi.string().required(),
-        coursecode:joi.string().required()
+        courseCode:joi.string().required(),
+        lectId:joi.string().required()
       }),
       courseSchedule: joi.object().keys({
         qualification: joi.string().required(),

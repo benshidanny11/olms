@@ -25,7 +25,7 @@ document.getElementById("bnt-back-home").addEventListener("click",() => {
     document.getElementById("panel-univ").style.display="none";    
 });
    //From faculty panel
-   document.getElementById("bnt-back-home-1").addEventListener("click",() => {
+    document.getElementById("bnt-back-home-1").addEventListener("click",() => {
     document.getElementById("panel-all-activities").style.display="block";
     document.getElementById("panel-fac").style.display="none";    
 });

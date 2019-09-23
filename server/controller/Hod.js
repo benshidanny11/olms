@@ -79,39 +79,88 @@ class Hod{
     }
 
     async getAllSchedures(req,res){
+      QeryExecutor.queryParams(StringQuery.getAllSchedule,[]).then((scheduleResult)=>{
+        if(scheduleResult.rows){
+          res.status(200).send({
+            Schedules:scheduleResult.rows
+          })
+        }else{
+          res.status(404).send({
+            Status:404,
+            Error:'No schedule found!'
+          })
+        }
+      });
+    }
 
+    async getVerifiedLecturer(req,res){
+      QeryExecutor.queryParams(StringQuery.getHodById,[req.params.id]).then((hodResult)=>{
+      if(hodResult.rows[0]){
+        QeryExecutor.queryParams(StringQuery.getLectuerByCategory,[hodResult.rows[0].shc_name]).then((lectRes)=>{
+          if(lectRes.rows){
+            res.status(200).send({
+              Lecturers:lectRes.rows
+            });
+          }else{
+            res.status(404).send({
+              message:'No lecturer found.'
+            });
+          }
+         });
+      }else{
+        res.status(404).send({
+          message:'No hod found.'
+        });
+      }
+      });
     }
     async getAllApplications(req,res){
-
+     QeryExecutor.queryParams(StringQuery.getallApplications,[]).then((applResult)=>{
+       if(applResult.rows){
+       res.send({
+         Application:applResult.rows
+       })
+       }else{
+        res.status(404).send({
+          Status:404,
+          message:'No application found.'
+        }); 
+       }
+     })
     }
-    async getAllCources(req,res){
-      
-          QeryExecutor.QueryNoParams(StringQuery.getAllCourses).then((cources)=>{
-           if(cources){
-             res.status(200).send(
-               {
-                 Status:200,
-                 Cources:cources
-               }
-             )
-           }else{
-             {
-               res.status(404).send(
-                 {
-                   Status:404,
-                   Users:'No Hod found'
-                 }
-               )
-             }
-           }
-          }).catch((err)=>{
-           res.status(500).send(
-             {
-               Status:500,
-               Error:`Message: ${err.message}`
-             }
-           )
+    
+    async getAllCourcesForHod(req,res){
+          QeryExecutor.queryParams(StringQuery.getHodById,[req.params.id]).then((hodResult)=>{
+            if(hodResult.rows[0]){
+              QeryExecutor.queryParams(StringQuery.getAllCoursesForHod,[hodResult.rows[0].dep_id]).then((cources)=>{
+                if(cources.rows){
+                  res.status(200).send(
+                    {
+                      Status:200,
+                      Cources:cources.rows
+                    }
+                  )
+                }else{
+                  {
+                    res.status(404).send(
+                      {
+                        Status:404,
+                        Users:'No course found'
+                      }
+                    )
+                  }
+                }
+               }).catch((err)=>{
+                res.status(500).send(
+                  {
+                    Status:500,
+                    Error:`Message: ${err.message}`
+                  }
+                )
+               });
+            }
           });
+        
     }
 
 }

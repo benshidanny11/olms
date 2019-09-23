@@ -4,7 +4,7 @@
         <link rel="stylesheet" href="../../css/verified-lecturers.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap.css">
     </head>
-      <body>
+      <body onload="getApplicationInfo()">
             <!-- For head -->
      <div class="head">
         <div class="dropdown">
@@ -23,7 +23,7 @@
                  <p class="p-head">Applications</p>
                </div>
               <div class="info-container">
-               <table width="1200">
+               <table width="1200" id="table_application_data">
                     <tr class="data-row-search">
                         <td class="data-search">
                         </td>
@@ -36,87 +36,6 @@
                             </div>
                         </td>
                  </tr>
-                 <tr class="data-row">
-                     <td class="data">
-                     <div class="univ-data">
-                            <p class="p-nuniv-name"> Urimubenshi Daniel</p>
-                        </div>
-                     </td>
-                     <td class="data">
-                         <div class="univ-data">
-                          <p class="p-nuniv-name"> Computer architecture</p>
-                         </div>
-                     </td>
-                     <td class="data">
-                        <div class="univ-data">
-                            <p class="p-nuniv-name">1/7/2019-25/7/2019</p>
-                        </div>
-                    </td>
-                    <td class="data">
-                            <div class="univ-data">
-                                <p class="p-nuniv-name">pending</p>
-                            </div>
-                    </td>
-                     <td class="data">
-                        <div class="add-fac">
-                           <button class="btn-more"> View lecturer's info </button>
-                         </div>
-                     </td>
-                 </tr>
-                        <tr class="data-row">
-                            <td class="data">
-                            <div class="univ-data">
-                                    <p class="p-nuniv-name"> Shumbusho Erinest</p>
-                            </div>
-                            </td>
-                            <td class="data">
-                                <div class="univ-data">
-                                    <p class="p-nuniv-name"> Database management systems</p>
-                                </div>
-                            </td>
-                            <td class="data">
-                                    <div class="univ-data">
-                                        <p class="p-nuniv-name"> 27/7/2019-15/8/2019</p>
-                                    </div>
-                                </td>
-                                <td class="data">
-                                        <div class="univ-data">
-                                            <p class="p-nuniv-name">pending</p>
-                                        </div>
-                                </td>
-                            <td class="data">
-                                <div class="add-fac">
-                                    <button class="btn-more">View lecturer's info</button>
-                                </div>
-                            </td>
-                        </tr>
-                <tr class="data-row">
-                        <td class="data">
-                        <div class="univ-data">
-                                <p class="p-nuniv-name"> Umulisa Yvonne</p>
-                        </div>
-                        </td>
-                        <td class="data">
-                            <div class="univ-data">
-                                <p class="p-nuniv-name"> Data warehouse</p>
-                            </div>
-                        </td>
-                        <td class="data">
-                                <div class="univ-data">
-                                    <p class="p-nuniv-name">20/8/2019-10/9/2019</p>
-                                </div>
-                            </td>
-                            <td class="data">
-                                    <div class="univ-data">
-                                        <p class="p-nuniv-name">pending</p>
-                                    </div>
-                            </td>
-                        <td class="data">
-                            <div class="add-fac">
-                                <button class="btn-more">View lecture's info</button>
-                            </div>
-                        </td>
-                    </tr>
                </table>
               </div>
              <div class="un-footer">

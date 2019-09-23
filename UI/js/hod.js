@@ -15,9 +15,11 @@ function dropdown(){
         }
     }
   
-
+  var id=document.getElementById("h_hod_id").innerHTML;
+  localStorage.setItem("hod_id",id);
 document.getElementById("id-available-rects").addEventListener("click",()=>{
-    window.location.href = '../../html/hod/available-lecturers.html'; 
+    window.location.href = '../../html/hod/available-lecturers.html?id='+id;
+    
 })
 document.getElementById("id-all-applications").addEventListener("click",()=>{
   window.location.href = '../../html/hod/allapplications.html'; 
@@ -36,7 +38,9 @@ document.getElementById("existing-schedule").addEventListener("click",()=>{
 
 document.getElementById("approved-application").addEventListener("click",()=>{
   window.location.href = '../../html/hod/approvedapplications.html'; 
-})
+});
+
+
 
 
 

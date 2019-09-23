@@ -15,7 +15,7 @@ function dropdown(){
         }
     }
     document.getElementById("bnt-back-home-n").addEventListener('click',() =>{
-        window.location.href = '../../html/hod/dashboard.html';
+        window.location.href = '../../html/login.html';
     });
 
     function getData(){
